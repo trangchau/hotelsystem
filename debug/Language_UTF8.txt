@@ -1,0 +1,139 @@
+﻿E0000001,"system error!\nreservation data not found"
+Q0000001,"Are you sure you want to delete the lower %d rows ?"
+W0000001,"Because include some exisitng datas it impossible to delete"
+W0000002,"%s is required item"
+W0000003,"%s is invalid"
+W0000004,"%s is greater than %s"
+W0000005,"%s is less than %s"
+W0000006,"There are no price settings on this BookingPath"
+M0000007,"This room type has not price setting"
+
+
+ITM00001,"BookingID","Bk.ID"
+ITM00002,"ReservationType","R.Type"
+ITM00003,"FirstArrivalDate","F.Arv"
+ITM00004,"LastDepartureDate","L.Dpt"
+ITM00005,"FirstName","Fst.Nam"
+ITM00006,"FamilyName","Fam.Nam"
+ITM00007,"Address","Adr"
+ITM00008,"TelehoneNumber"
+ITM00009,"FaxNumber"
+ITM00010,"EmailAddress"
+ITM00011,"Rooms number"
+ITM00012,"Checkin"
+ITM00013,"Checkout"
+ITM00012,"ArrivalDate"
+ITM00013,"DepartureDate"
+
+
+VAL00001,"Personal"
+VAL00002,"Group"
+
+
+RVP00001,"Agent"
+RVP00002,"Website"
+RVP00004,"Tetephone"
+RVP00008,"Fax"
+RVP00016,"E-mail"
+RVP00032,"Walkin"
+
+		req = _T("adult person number");
+		req = _T("children number");
+		req = _T("RequestedRoomType
+
+
+	{ _T("Very Important Person(VIP)"),	CLL_VIP		},	// Very Important Person
+	{ _T("Dominan"),					CLL_DOMINANT},	// Dominant Person
+	{ _T("General"),					CLL_GENERAL	},	// General Person
+	{ _T("Undesirable Guest(UG)"),		CLL_UG		}	// Undesirable Guest
+	{ _T("Web Reservation"),{ VIA_WEBSITE,   0	}},	// Resrevation via direct WebSite
+	{ _T("Telephone"),		{ VIA_TELEPHONE, 0	}},	// Reservation via tel.
+	{ _T("Fax"),			{ VIA_FAX,       0	}},	// Reservation via fax
+	{ _T("email"),			{ VIA_EMAIL,     0	}},	// Reservation via direct email
+	{ _T("Walk In"),		{ VIA_WALKIN,    0	}}	// Walkin checkin
+static	WCHAR	*Tab_ttl[] =	{	{ _T("Reservation")	},
+static	WCHAR	*Rom_txt[] =	{	{ _T("RoomNo")		},
+									{ _T("Psn.Name")	},
+									{ _T("RSV ID")		},
+									{ _T("Rsv.Name")	},
+									{ _T("Arrival")		},
+									{ _T("Departure")	} };
+									{ _T("CheckIn")		},
+									{ _T("InHouse")		},
+									{ _T("CheckOut")	} };
+
+static	WCHAR	*Rsv_txt[] =	{	{ _T("RSV ID")		},
+									{ _T("Ext.RsvID")	},
+									{ _T("Kind")		},
+									{ _T("Rsv.Name")	},
+									{ _T("RoomNo")		},
+									{ _T("Psn.Name")	},
+									{ _T("Arrival")		},
+
+Personal Group
+	WCHAR		*opn=_T("Unknown"), *pfx=_T(" transaction was failure");
+	case TRN_STT:	chk = dbc->BeginTrans();	opn=_T("Begin");		break;
+	case TRN_CMT:	chk = dbc->CommitTrans();	opn=_T("Commit");		break;
+	case TRN_RBK:	chk = dbc->Rollback();		opn=_T("Rollback");		break;
+
+
+
+
+
+
+	case DTL_STS_NEW:	fcl=STC_NWF;	bcl=STC_NWB;	str = _T(" Creating ");		break;
+	case DTL_STS_RSV:	fcl=STC_RVF;	bcl=STC_RVB;	str = _T(" Reserved ");		break;
+	case DTL_STS_INH:	fcl=STC_IHF;	bcl=STC_IHB;	str = _T(" Inhouse ");		break;
+	case DTL_STS_COT:	fcl=STC_COF;	bcl=STC_COB;	str = _T(" Checked out ");	break;
+	case DTL_STS_CXL:	fcl=STC_CXF;	bcl=STC_CXB;	str = _T(" Canceled ");		break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_T("New")	},
+ _T("Name")	
+ _T("Status")	
+ _T("R.Typ")	
+ _T("R.No.")	
+ _T("Arrv")	
+ _T("Dept")	
+ _T("Ad/Ch")	
+	{ _T("UseStart")		},
+									{ _T("UseEnd")		},
+									{ _T("RoomNo.")	},
+									{ _T("Description")		},
+									{ _T("Amount")		} };
+
+
+	WCHAR		*str=_T("Unknown");
+
+
+		req = _T("ReservationType");
+		req = _T("FirstName");
+			req = _T("BookingPath");
+			req = _T("ClientRank");
+
+	switch( sts ){
+	case DTL_STS_NEW:	fcl=STC_NWF;	bcl=STC_NWB;	str = _T(" Creating ");		break;
+	case DTL_STS_RSV:	fcl=STC_RVF;	bcl=STC_RVB;	str = _T(" Reserved ");		break;
+	case DTL_STS_INH:	fcl=STC_IHF;	bcl=STC_IHB;	str = _T(" Inhouse ");		break;
+	case DTL_STS_COT:	fcl=STC_COF;	bcl=STC_COB;	str = _T(" Checked out ");	break;
+	case DTL_STS_CXL:	fcl=STC_CXF;	bcl=STC_CXB;	str = _T(" Canceled ");		break;
+
